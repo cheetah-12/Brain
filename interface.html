@@ -1,0 +1,341 @@
+bx<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain-Storm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.10;
+            color: #333;
+            background-image: url("my.jpeg");
+            background-color: transparent;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-image: url("my.jpeg");
+            background-color: transparent;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #17a30f;
+        }
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .hero {
+           background-image: url("hack.jpeg");
+            color: #fff;
+            text-align: center;
+            padding: 100px 0 60px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .projects {
+            padding: 60px 0;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+            padding: 20px 0;
+        }
+        .project-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-info {
+            padding: 20px;
+        }
+        .project-info h3 {
+            margin-bottom: 10px;
+        }
+        .project-info p {
+            color: #666;
+            font-size: 14px;
+        }
+        footer {
+            background-color: #d3c9c9;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+        .footer-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .footer-section ul {
+            list-style-type: circle;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin: 5px 0;
+        }
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #ddd7d7;
+        }
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+            .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        .footer-bottom p {
+            margin: 5px 0;
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+        .a {
+            font-family: Arial, sans-serif;
+            color: #f0f2f5;
+        }
+        .header {
+            background-color: #ffffff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            height: 5vh;
+            display: flex;
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: white;
+            border-radius: 30px;
+            align-items: center;
+            box-shadow: 0 10px 25px;
+
+        }
+        .logo:hover input{
+            width:400px;
+
+        }
+        .logo input{
+width: 0;
+outline: none;
+border: none;
+font-weight: 500;
+transition: 0.8s;
+background-color: transparent;
+        }
+        .logo a i{
+            color: white;
+            font-size: 18px;
+        }
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+            background-color: #e4e6eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+      
+        input{
+            border-radius: 30px;
+            padding: 10px;
+            width: 350px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        
+           </style>
+           <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                   
+        <input type="text" placeholder="Enter search term"><i class='bx bx-search-alt-2'></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Brain-Storm</h1>
+           <marquee ><p>“Innovation is born from the collision of ideas; in the storm of creativity, we find our brightest solutions.”</p></marquee> 
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>OUTLINE COURSES</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="c++.jpg"width="400" height="300" alt="Project 1">
+                    <div class="project-info">
+                        <a href="https://www.geeksforgeeks.org/c-programming-language/"><h3>c/c++ programming language</h3></a>
+                        <SUMMary>
+                            What is C?
+                            <DEtails>
+                                <p>C is a general-purpose, procedural, high-level programming language used in the development of computer software and applications, system programming, games, and more.
+
+                                    C language was developed by Dennis M. Ritchie at the Bell Telephone Laboratories in 1972.
+                                    It is a powerful and flexible language which was first developed for the programming of the UNIX operating System.
+                                    C is one of the most widely used programming languages.</p>
+                            </DEtails>
+                        </SUMMary>
+                        <p</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="java.jpg"width="400" height="300" alt="Project 2">
+                    <div class="project-info">
+                       <a href="https://www.geeksforgeeks.org/java/"> <h3>Java Programming language</h3></a>
+                       <summary>
+                        What is Java?
+                        <details>
+                            <p>Developed by Sun Microsystems in 1995, Java is a highly popular, object-oriented programming language. This platform independent programming language is utilized for Android development, web development, artificial intelligence, cloud applications, and much more.</p>
+                        </details>
+                       </summary>
+                       
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="html.jpeg"width="400" height="300" alt="Project 3">
+                    <div class="project-info">
+                       <a href="https://www.geeksforgeeks.org/html-tutorial/?ref=outind"><h3>HTML(Hypertext markup Language)</h3></a>
+                       <summary>
+                        What is HTML?
+                        <details>
+                            <p>HTML stands for HyperText Markup Language. It is the standard language used to create and design web pages on the internet. It was introduced by Tim Berners-Lee in 1991 at CERN as a simple markup language. Since then, it has evolved through versions from HTML 2.0 to HTML5 (the latest 2024 version).</p>
+                        </details>
+                       </summary>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="css.jpg"width="400" height="300" alt="Project 4">
+                    <div class="project-info">
+                       <a href="https://www.geeksforgeeks.org/css-tutorial/?ref=outind"><h3>CSS(Cascading style sheets)</h3></a> 
+                       <summary>
+                        What is CSS?
+                        <details>
+                            <p>CSS, or Cascading Style Sheets, is a language used to style and enhance websites. It controls how HTML elements—such as text, images, and buttons—are displayed on a webpage. With CSS, you can adjust font sizes and colors, add backgrounds, and manage the layout, transforming a basic webpage into a visually appealing and user-friendly experience. CSS also simplifies layout management across multiple web pages by using external stylesheets stored in CSS files.</p>
+                        </details>
+                       </summary>
+                        </div>
+                    </div>
+                        <div class="project-card">
+                            <img src="python.jpeg"width="400" height="300" alt="Project 4">
+                            <div class="project-info">
+                                <a href="https://www.geeksforgeeks.org/python-programming-language-tutorial/"><h3>Python Programming language</h3></a> 
+                                <summary>
+                                    What is Python?
+                                    <details>
+                                        <p>Python, known for its simplicity and versatility, is one of the most popular programming languages today. From developing dynamic web applications to driving machine learning algorithms and handling complex data analytics. Most of the tech giants like Google, Amazon, Facebook, and Instagram rely on Python to build and maintain their cutting-edge technology solutions.</p>
+                                    </details>
+                                </summary>
+                               
+                                </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="hack.jpeg"width="400" height="300" alt="Project 4">
+                        <div class="project-info">
+                           <a href="QUIZ.html"><h3>Brain-Storm QUIZ</h3></a> 
+                            </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+           
+                    <h3>Top Tutorials</h3><br><br>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=dD2EISBDjWM&list=PLr6-GrHUlVf_ZNmuQSXdS197Oyr1L9sPB">HTML Tutorial</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=qKoajPPWpmo&list=PLr6-GrHUlVf8JIgLcu3sHigvQjTw_aC9C">CSS Tutorial</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=41qgdwd3zAg&list=PLS1QulWo1RIaJECMeUT4LFwJ-ghgoSH6n">Python Tutorial</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=r59xYe3Vyks&list=PLS1QulWo1RIbfTjQvTdj8Y6yyq4R7g-Al">Java Tutorial</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=KJgsSFOSQv0&list=PLWKjhJtqVAbmUE5IqyfGYEYjrZBYzaT4m">C++ Tutorial</a></li>
+                    </ul>
+                </div>
+
+    
+                <div class="footer-section">
+            </div>
+            <div class="footer-bottom">
+                <p><a href="contactus.html">Contact Us</a>    |   <a href="About Us.html">About</a>   |   <a href="momo.html">Home</a><br><br><br>
+                    <a href="interface.html">Back To Top</a> <br><br><br>
+                    <a href="login.html">Logout</a>
+                    <p>&copy; 2024 Brain Storm  All rights reserved.</p>
+            
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
